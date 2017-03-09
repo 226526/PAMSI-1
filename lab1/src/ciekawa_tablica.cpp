@@ -11,7 +11,6 @@ public:
 	int przypisanie (int pozycja, int wartosc, int blad);
 	int odczytanie (int pozycja, int blad);
 	int rozmiar (int rozmiar, int blad);
-
 private:
 	int ROZMIAR;
 	int WYPELNIENIE;
@@ -45,7 +44,6 @@ int * Moja_tablica::powieksz_tablice (int rozmiar, int stara_tablica[], int blad
 }
 
 int main(){
-
 	Moja_tablica tab;
 
 	return 0;
