@@ -13,12 +13,18 @@ using namespace std;
 
 class Moja_tablica{
 public:
+<<<<<<< HEAD
 	int przypisanie (int pozycja, int wartosc);
 	int odczytanie (int pozycja);
 	int rozmiar ();
 	int wypelnienie ();
 
 	Moja_tablica (int r=10);
+=======
+	int przypisanie (int pozycja, int wartosc, int blad);
+	int odczytanie (int pozycja, int blad);
+	int rozmiar (int rozmiar, int blad);
+>>>>>>> 21b4621718c1e1c15c3a620fc1136471031c363e
 private:
 	int ROZMIAR;
 	int WYPELNIENIE;
@@ -110,6 +116,7 @@ int * Moja_tablica::zmniejsz_tablice (int rozmiar, int wypelnienie, int stara_ta
 }
 
 int main(){
+<<<<<<< HEAD
 	int i;
 	int ilosc = 10000; // przechowuje informację na temat ilosci powtorzen petli zapisującej liczby do tablicy
 	Moja_tablica *tab = new Moja_tablica[10]; // tworzenie obiektu
@@ -158,6 +165,9 @@ int main(){
 	//cout << "Wypelnienie: " << wypelnienie << endl;
 
 	delete [] tab; //zwolnienie pamięci przydzielonej do obiektu
+=======
+	Moja_tablica tab;
+>>>>>>> 21b4621718c1e1c15c3a620fc1136471031c363e
 
 	return 0;
 }
