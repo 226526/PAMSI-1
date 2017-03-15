@@ -1,0 +1,61 @@
+//============================================================================
+// Name        : ciekawa_tablica.cpp
+// Author      : Michał Wieczorek
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Creating non sized Table, Ansi-style
+//============================================================================
+#include <iostream>
+
+using namespace std;
+
+class Moja_tablica{
+public:
+	int przypisanie (int pozycja, int wartosc);
+	int odczytanie (int pozycja);
+	int rozmiar (int rozmiar);
+
+private:
+	int ROZMIAR;
+	int WYPELNIENIE;
+	int *TABLICA;
+	int BLAD;
+
+	int * powieksz_tablice (int rozmiar, int stara_tablica[]);
+};
+
+// metody publiczne
+int Moja_tablica::przypisanie (int pozycja, int wartosc){
+	return TABLICA[pozycja] = wartosc;
+}
+
+int Moja_tablica::odczytanie (int pozycja){
+	return TABLICA[pozycja];
+}
+
+int Moja_tablica::rozmiar (int rozmiar){
+	return ROZMIAR;
+}
+
+// metody prywatne
+int * Moja_tablica::powieksz_tablice (int rozmiar, int stara_tablica[]){
+	int i;
+	int * nowa_tablica = new int[rozmiar];
+
+	for(i=0; i<rozmiar; i++){
+		nowa_tablica[i] = stara_tablica[i];
+	}
+	return nowa_tablica;
+}
+
+int main(){
+
+	Moja_tablica * tab = new Moja_tablica[10];
+
+	tab.przypisanie(5,5);
+
+	cout << "Co jest w tablicy: ";
+	cout << tab.Moja_tablica::odczytanie(5) << endl;
+
+	return 0;
+}
