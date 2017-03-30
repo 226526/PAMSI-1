@@ -1,8 +1,10 @@
-src/main.d: ../src/main.cpp ../src/Program.h ../src/Tablica.h \
- ../src/Stoper.h
-
-../src/Program.h:
+src/main.d: ../src/main.cpp ../src/Tablica.h ../src/IProgram.h \
+ ../src/Stoper.h ../src/IStruktura.h
 
 ../src/Tablica.h:
 
+../src/IProgram.h:
+
 ../src/Stoper.h:
+
+../src/IStruktura.h:

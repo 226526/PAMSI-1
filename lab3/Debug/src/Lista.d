@@ -1,5 +1,8 @@
-src/Lista.d: ../src/Lista.cpp ../src/Lista.h ../src/Program.h
+src/Lista.d: ../src/Lista.cpp ../src/Lista.h ../src/IStruktura.h \
+ ../src/IProgram.h
 
 ../src/Lista.h:
 
-../src/Program.h:
+../src/IStruktura.h:
+
+../src/IProgram.h:

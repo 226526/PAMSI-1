@@ -7,11 +7,11 @@
 
 #ifndef STOS_H_
 #define STOS_H_
-#include "Program.h"
+#include "IStruktura.h"
 
 namespace std {
 
-class Stos {
+class Stos: public IStruktura{
 public:
 	Stos();
 	virtual ~Stos();

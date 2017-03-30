@@ -1,5 +1,8 @@
-src/Kolejka.d: ../src/Kolejka.cpp ../src/Kolejka.h ../src/Program.h
+src/Kolejka.d: ../src/Kolejka.cpp ../src/Kolejka.h ../src/IStruktura.h \
+ ../src/IProgram.h
 
 ../src/Kolejka.h:
 
-../src/Program.h:
+../src/IStruktura.h:
+
+../src/IProgram.h:

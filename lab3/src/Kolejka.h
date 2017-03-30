@@ -7,11 +7,11 @@
 
 #ifndef KOLEJKA_H_
 #define KOLEJKA_H_
-#include "Program.h"
+#include "IStruktura.h"
 
 namespace std {
 
-class Kolejka {
+class Kolejka: public IStruktura{
 public:
 	Kolejka();
 	virtual ~Kolejka();

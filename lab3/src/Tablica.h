@@ -7,11 +7,11 @@
 
 #ifndef TABLICA_H_
 #define TABLICA_H_
-#include "Program.h"
+#include "IProgram.h"
 #include <iostream>
 #include <cstdlib>
 
-class Tablica: public Program{ // tablica która może zmieniać swój rozmiar
+class Tablica: public IProgram{ // tablica która może zmieniać swój rozmiar
 public:
 	int przypisanie (int pozycja, int wartosc); // przypisanie indeksowi tablicy sprecyzowaniej wartości
 	int odczytanie (int pozycja);  // zwraca wartosc elementu przypisanego do indeksu tablicy

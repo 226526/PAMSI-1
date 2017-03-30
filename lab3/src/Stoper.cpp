@@ -18,7 +18,7 @@ Stoper::Stoper()
 	cout.precision(8); // liczba miejsc po przecinku
 }
 
-void Stoper::mierz_czas (Program *obiekt, int typ_alg, int ilosc){
+void Stoper::mierz_czas (IProgram *obiekt, int typ_alg, int ilosc){
 	START = clock(); // zapisanie czasu startu mierzenia
 	obiekt->wykonaj_obliczenia(typ_alg, ilosc); // tykonanie obliczeń na podanym obiekcie
 	STOP = clock(); // zapisanie końca mierzenia

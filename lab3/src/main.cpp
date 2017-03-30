@@ -5,12 +5,13 @@
 // Copyright   :
 // Description : Creating interface for calculations, Ansi-style
 //============================================================================
-#include "Program.h"
 #include "Tablica.h"
 #include "Stoper.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include "IProgram.h"
+#include "IStruktura.h"
 
 using namespace std;
 
