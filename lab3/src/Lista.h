@@ -7,21 +7,26 @@
 
 #ifndef LISTA_H_
 #define LISTA_H_
-#include "IStruktura.h"
+#include "IProgram.h"
+#include "ILista.h"
+#include "Lista_Elem.h"
 
 namespace std {
 
-class Lista: public IStruktura{
+class Lista: public ILista, public IProgram{
 public:
 	Lista();
 	virtual ~Lista();
+	// ILista
+	virtual void dodaj_poczatek(int liczba);         // dodaje nowy element na poczatek listy
+	virtual int rozmiar();                           // zwraca aktualny rozmiar listy
+	virtual Lista_Elem* wyszukaj (int klucz);        // zwraca wskaźnik na element o podanym kluczu
+	//IProgram
+	virtual void wykonaj_obliczenia(int typ_alg, int ilosc); // nadpisuje listę danymi, a następnie wyszukuje element
 private:
-	virtual void dodaj (int element); // dodaje nowy element na koniec listy
-	virtual int* pobierz ();          // pobiera wskaźnik na element z końca listy
-	virtual int rozmiar ();           // zwraca aktualny rozmiar listy
-	virtual int* wyszukaj (int klucz);// zwraca wskaźnik na element o podanym kluczu
-	int* nastepny ();                 // zwraca wskaznik na nastepny element listy
-	int* poprzedni ();                // zwraca wskaźnik na poprzedni element listy
+	Lista_Elem* pierwszy;  // wskaźnik na pierwszy element listy
+	Lista_Elem* ostatni;   // wskaźnik na ostatni element listy
+	int Rozmiar;           // pole przechowuje rozmiar listy
 };
 
 } /* namespace std */

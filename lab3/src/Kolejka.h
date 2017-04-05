@@ -7,19 +7,30 @@
 
 #ifndef KOLEJKA_H_
 #define KOLEJKA_H_
-#include "IStruktura.h"
+#include <iostream>
+#include "IProgram.h"
+#include "IKolejka.h"
 
 namespace std {
 
-class Kolejka: public IStruktura{
+class Kolejka: public IKolejka, public IProgram {
 public:
-	Kolejka();
+	Kolejka(int r = 10);
 	virtual ~Kolejka();
-	virtual void dodaj (int element); // realizuje push, dodaje element na początek kolejki
-	virtual int* pobierz ();          // realizuje pop, pobiera ostatni element kolejki
-	virtual int rozmiar ();           // podaje aktualny rozmiar kolejki
-	virtual int* wyszukaj (int klucz);// zwraca wskaźnik na element o podanym kluczu
-	int* ostatni ();                  // zwraca wskaźnik na ostatni element kolejki
+	//IKolejka
+	virtual void dodaj(int element);  	// realizuje push, dodaje element na początek kolejki
+	virtual void usun();       			// realizuje pop, pobiera ostatni element kolejki
+	virtual int rozmiar();           	// podaje aktualny rozmiar kolejki
+	virtual bool czy_pusta();		   	// sprawdza czy kolejka jest pusta
+	virtual int pierwszy();            	// zwraca wartość pierwszego elementu
+	virtual int wyszukaj(int klucz); 	// szuka elementu o podanym kluczu na liście
+	//IProgram
+	virtual void wykonaj_obliczenia(int typ_alg, int ilosc);
+private:
+	int glowa;		// "wskaźnik" na pierwszy element kolejki
+	int ogon;	    // "wskaźnik" na ostatni element kolejki
+	int Rozmiar;	// rozmiar kolejki
+	int *tab;      	// tablica na elementy kolejki
 };
 
 } /* namespace std */

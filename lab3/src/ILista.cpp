@@ -5,16 +5,16 @@
  *      Author: michal
  */
 
-#include "IStruktura.h"
+#include "ILista.h"
 
 namespace std {
 
-IStruktura::IStruktura() {
+ILista::ILista() {
 	// TODO Auto-generated constructor stub
 
 }
 
-IStruktura::~IStruktura() {
+ILista::~ILista() {
 	// TODO Auto-generated destructor stub
 }
 

@@ -74,7 +74,7 @@ void Tablica::wykonaj_obliczenia (int typ_alg, int ilosc){
 	if (typ_alg == 0){
 		// algorytm N+1 ******************************************************************************
 		for (int i=0; i<ilosc; i++){
-			Tablica::przypisanie(i, 1+rand()%9); // po każdym kroku, następuje nadpisanie tablicy i jeden element
+			Tablica::przypisanie(i, 1+rand()%9); // po każdym kroku, następuje nadpisanie tablicy o jeden element
 			}
 	}
 	else if (typ_alg == 1){

@@ -12,7 +12,7 @@ class IProgram{ // Interface
 public:
 	IProgram();  // Konstruktor
 	virtual ~IProgram();  // Destruktor
-	virtual void wykonaj_obliczenia(int typ_alg, int ilosc); // wirtualna metoda pozwala na zapełnienie dowolnego pojemnika z danymi
+	virtual void wykonaj_obliczenia(int typ_alg, int ilosc)=0; // wirtualna metoda pozwala na zapełnienie dowolnego pojemnika z danymi
 };
 
 #endif /* IPROGRAM_H_ */
