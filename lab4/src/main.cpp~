@@ -24,7 +24,7 @@ int main()
 {
   srand( time( NULL ) );
   int lewo=0;
-  int prawo=20;			// prawo to ogolnie rozmiar; czyli prawy kraniec tablicy
+  int prawo=10;			// prawo to ogolnie rozmiar; czyli prawy kraniec tablicy
 
   cout<<"dzialam"<<endl;
   Tablica t1(prawo);

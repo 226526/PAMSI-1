@@ -1,9 +1,9 @@
 //============================================================================
 // Name        : main.cpp
-// Author      : Michał Wieczorek
+// Author      : Michał Wieczorek (ale merga dodal Artur Szafraniak) 
 // Version     : 4.1
 // Copyright   :
-// Description : Szybkie sortowanie danych
+// Description : Mergesort - implementacja na dynamicznej tablicy 
 //============================================================================
 
 #include <iostream>
