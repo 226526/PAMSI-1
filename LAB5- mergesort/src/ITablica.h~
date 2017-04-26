@@ -1,0 +1,31 @@
+/*
+ * Tablica.h
+ *
+ *  Created on: 17 mar 2017
+ *      Author: michal
+ */
+
+#ifndef ITABLICA_H_
+#define ITABLICA_H_
+#include "IProgram.h"
+#include "IKontener.h"
+#include <iostream>
+#include <cstdlib>
+
+namespace std {
+
+// ILista zawiera
+class ITablica: public IKontener{
+public:
+	ITablica();
+	virtual ~ITablica();
+	virtual void dodaj_poczatek(int liczba)=0;	// dodaje nowy element na początek listy
+	virtual int rozmiar()=0;               		// zwraca aktualny rozmiar listy
+	virtual int wyszukaj(int klucz)=0;	// zwraca wartosc wyszukanego
+};
+
+} /* namespace std */
+
+
+
+#endif /* TABLICA_H_ */

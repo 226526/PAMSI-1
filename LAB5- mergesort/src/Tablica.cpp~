@@ -81,7 +81,7 @@ void Tablica::wyswietlanie(){
 void Tablica::algorytm_n1(int ilosc) {
 	// algorytm N+1 ******************************************************************************
 	for (int i = 0; i < ilosc; i++) {
-		Tablica::przypisanie(i, 1 + rand() % ilosc-1); // po każdym kroku, następuje nadpisanie tablicy o jeden element
+		Tablica::przypisanie(i,i); // po każdym kroku, następuje nadpisanie tablicy o jeden element
 	}
 
 }
@@ -199,14 +199,12 @@ void Tablica::merge_sort( Tablica* temp, int lewo, int prawo)
   int piwot;	
   if(lewo<prawo)
   {
-    piwot=(lewo+prawo)/2+1;
+    piwot=(lewo+prawo)/2;
     merge_sort(temp,lewo,piwot);
     merge_sort(temp,piwot+1,prawo);
     merge(temp,lewo,piwot,prawo);
   }
 }
-
-
 
 
 

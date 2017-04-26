@@ -1,0 +1,17 @@
+/*
+ * Tablica.cpp
+ *
+ *  Created on: 17 mar 2017
+ *      Author: michal
+ */
+
+#include "ITablica.h"
+
+
+using namespace std;
+
+
+
+
+
+

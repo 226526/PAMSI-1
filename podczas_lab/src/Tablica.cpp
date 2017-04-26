@@ -7,7 +7,9 @@
 
 #include "Tablica.h"
 
+
 using namespace std;
+
 
 // Konstruktor
 Tablica::Tablica(int r) {
@@ -79,7 +81,7 @@ void Tablica::wyswietlanie(){
 void Tablica::algorytm_n1(int ilosc) {
 	// algorytm N+1 ******************************************************************************
 	for (int i = 0; i < ilosc; i++) {
-		Tablica::przypisanie(i, 1 + rand() % 99); // po każdym kroku, następuje nadpisanie tablicy o jeden element
+		Tablica::przypisanie(i, 1 + rand() % ilosc-1); // po każdym kroku, następuje nadpisanie tablicy o jeden element
 	}
 
 }
@@ -92,7 +94,7 @@ void Tablica::algorytm_2n(int ilosc) {
 
 	while (rozmiar < ilosc) { //jeżeli ilosc docelowa elementow > od  aktualnego rozmiaru to zapisuje
 		for (i = rozmiar; i > rozmiar_poprz; i--) { // petla zapisuje w odwrotnym kierunku, gdyż najpierw tworzy ostatni element
-			Tablica::przypisanie(i, 1 + rand() % 9); // nowej tablicy, a później wypełnia pusty obszar poniżej liczbami pseudolosowymi
+			Tablica::przypisanie(i, 1 + rand() % ilosc-1); // nowej tablicy, a później wypełnia pusty obszar poniżej liczbami pseudolosowymi
 			WYPELNIENIE++;
 		}
 		rozmiar_poprz = rozmiar; //zapis poprzedniego rozmiaru tablicy w którym korzysta w kolejnym kroku
@@ -100,7 +102,7 @@ void Tablica::algorytm_2n(int ilosc) {
 	}
 	Tablica::przypisanie(rozmiar, 0); // w ostatnim kroku następuje poszerzenie tablicy, ale jest ona większa od docelowego
 	for (i = ilosc; i > rozmiar_poprz; i--) { // rozmiaru, dlatego ostatnia pętla nadpisuje elementy do docelowej ilosci elementow
-		Tablica::przypisanie(i, 1 + rand() % 9); // pozostała przestrzeń pozostaje pusta
+		Tablica::przypisanie(i, 5 + rand() % ilosc-1); // pozostała przestrzeń pozostaje pusta
 		WYPELNIENIE++;
 	}
 }
@@ -112,6 +114,10 @@ void Tablica::wykonaj_obliczenia(int typ_alg, int ilosc) {
 	}
 	else if (typ_alg == 1) {
 		this->algorytm_2n(ilosc);
+	}
+	else if(typ_alg == 2) {
+		Tablica* temp=new Tablica(ilosc);
+		this->merge_sort(temp,0,ilosc-1);
 	}
 	else {
 		cout << "Blad: Nieprawidlowy wybor algorytmu" << endl;
